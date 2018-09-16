@@ -4,7 +4,7 @@ root_dir=$cur_dir/../..
 cd $root_dir
 
 redo=1
-dataset_name="tutorial_person"
+dataset_name="tutorial_person" #Edit this to your dataset name. Don't change anything else
 data_root_dir="$HOME/MyDataset/$dataset_name"
 mapfile="$data_root_dir/labelmap.prototxt"
 anno_type="detection"

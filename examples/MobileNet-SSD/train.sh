@@ -7,14 +7,14 @@ fi
 mkdir -p snapshot
 
 #Initiate a new training
-../../build/tools/caffe train -solver="solver_train.prototxt" \
--weights="mobilenet_iter_73000.caffemodel" \
--gpu 1
+#../../build/tools/caffe train -solver="solver_train.prototxt" \
+#-weights="mobilenet_iter_73000.caffemodel" \
+#-gpu 1
 
 
 #To resume a training from a solverstate
-#../../build/tools/caffe train -solver="solver_train.prototxt" \
-#-snapshot snapshot/mobilenet_iter_1000.solverstate \
-#-gpu 1
+../../build/tools/caffe train -solver="solver_train.prototxt" \
+-snapshot snapshot/mobilenet_iter_1022.solverstate \
+-gpu 1
 
 
