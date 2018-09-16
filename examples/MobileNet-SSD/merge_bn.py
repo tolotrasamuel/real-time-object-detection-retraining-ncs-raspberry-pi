@@ -5,10 +5,10 @@ sys.path.insert(0, caffe_root + 'python')
 import caffe  
 
 train_proto = 'example/MobileNetSSD_train.prototxt'  #Don't change this
-train_model = 'snapshot/mobilenet_iter_1022.caffemodel'  #Required: Edit this to your snapshot caffemodel
+train_model = 'snapshot/mobilenet_iter_2035.caffemodel'  #Required: Edit this to your snapshot caffemodel
 
-deploy_proto = 'deploy/MobileNetSSD_deploy_1000_person.prototxt' #Optional: Where you want the deploy_proto to be genearated   
-save_model = 'deploy/MobileNetSSD_deploy_1000_person.caffemodel' #Optional: Where you want to save the deploy model
+deploy_proto = 'example/MobileNetSSD_deploy.prototxt'  #Don't change this
+save_model = 'deploy/MobileNetSSD_deploy_2035_person.caffemodel' #Optional BUT: Where you want to save the deploy model. MAKE SURE THE DIRECTORY EXISTS BEFOREHAND. CREATE IT MANUALLY
 
 def merge_bn(net, nob):
     '''
@@ -26,7 +26,7 @@ def merge_bn(net, nob):
                 conv = net.params[key]
                 if not net.params.has_key(key + "/bn"):
                     for i, w in enumerate(conv):
-                        key = key.replace('_new', '') # This is the line I added
+                        #key = key.replace('_new', '') # This is the line I added
                         nob.params[key][i].data[...] = w.data
                 else:
                     bn = net.params[key + "/bn"]
