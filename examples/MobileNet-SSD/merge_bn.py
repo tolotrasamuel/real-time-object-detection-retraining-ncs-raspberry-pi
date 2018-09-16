@@ -4,11 +4,11 @@ caffe_root = '/home/tolotra/caffe/'
 sys.path.insert(0, caffe_root + 'python')  
 import caffe  
 
-train_proto = 'example/MobileNetSSD_train.prototxt'  
-train_model = 'snapshot/mobilenet_iter_4000.caffemodel'  #should be your snapshot caffemodel
+train_proto = 'example/MobileNetSSD_train.prototxt'  #Don't change this
+train_model = 'snapshot/mobilenet_iter_1022.caffemodel'  #Required: Edit this to your snapshot caffemodel
 
-deploy_proto = 'example/MobileNetSSD_deploy_without_new.prototxt'  
-save_model = 'example/MobileNetSSD_deploy_4000_fixed.caffemodel'
+deploy_proto = 'deploy/MobileNetSSD_deploy_1000_person.prototxt' #Optional: Where you want the deploy_proto to be genearated   
+save_model = 'deploy/MobileNetSSD_deploy_1000_person.caffemodel' #Optional: Where you want to save the deploy model
 
 def merge_bn(net, nob):
     '''
