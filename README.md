@@ -1,3 +1,7 @@
+# This is a Fork of SSD: Single Shot MultiBox Detector
+This fork allows you to retrain a model and run the model onto the Movidius Neural Compute Stick with a Rasbperry Pi. 
+Please refer to my [website](https://tolotra.com/2018/09/15/how-to-retrain-ssd-mobilenet-for-real-time-object-detection-using-a-raspberry-pi-and-movidius-neural-compute-stick/#Demo) to see complete the instruction on how to implement and install it. 
+
 # SSD: Single Shot MultiBox Detector
 
 [![Build Status](https://travis-ci.org/weiliu89/caffe.svg?branch=ssd)](https://travis-ci.org/weiliu89/caffe)
